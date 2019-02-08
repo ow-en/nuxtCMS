@@ -1,0 +1,67 @@
+{
+  "name": "nuxtCMS",
+  "version": "1.0.0",
+  "description": "Headless CMS garbage heap decrepit salvo of filth",
+  "author": "ow-en",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt-ts dev",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start",
+    "generate": "nuxt-ts generate",
+    "lint": "tslint --project",
+    "lintfix": "tslint --fix --project .",
+    "post-update": "yarn upgrade --latest",
+    "precommit": "npm run lint",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "testc": "tsc -p tsconfig.json",
+    "tsc": "tsc --showConfig"
+  },
+  "dependencies": {
+    "@nuxt/typescript-edge": "^2.5.0-25826407.eac6d022",
+    "@nuxt/vue-app-edge": "^2.5.0-25826407.eac6d022",
+    "@nuxtjs/apollo": "^4.0.0-rc2.3",
+    "@nuxtjs/axios": "^5.3.6",
+    "cross-env": "^5.2.0",
+    "graphql-tag": "^2.10.1",
+    "nuxt": "^2.3.4",
+    "nuxt-buefy": "^0.3.2",
+    "nuxt-ts": "^2.4.3",
+    "vue-property-decorator": "^7.3.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^0.0.1",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^10.12.23",
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^8.2.1",
+    "babel-jest": "^23.6.0",
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.9",
+    "prettier": "1.14.3",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "vue-jest": "^3.0.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "json",
+      "vue"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/$1"
+    },
+    "transform": {
+      ".*\\.(vue)$": "vue-jest",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.ts$",
+    "snapshotSerializers": [
+      "jest-serializer-vue"
+    ]
+  }
+}
